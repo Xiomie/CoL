@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class SpaceshipShooting : MonoBehaviour
 {
@@ -28,4 +29,11 @@ public class SpaceshipShooting : MonoBehaviour
     private float laserCoolRate = 0.5f;
     private float currentLaserHeat = 0f;
     private bool overHeated = false;
+
+    private bool firing;
+
+    public void onFire(InputAction.CallbackContext context)
+    {
+        firing = context.performed;
+    }
 }
