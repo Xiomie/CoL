@@ -19,6 +19,17 @@
                 {
                     "name": "",
                     "id": "de3c6564-05fd-4d82-bff3-70a6d83b989a",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "40df1494-63ba-4398-aa18-664d785e2d08",
                     "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
