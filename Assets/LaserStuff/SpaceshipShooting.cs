@@ -12,7 +12,7 @@ public class SpaceshipShooting : MonoBehaviour
 
     [Header("=== Hardpoint Settings ===")]
     [SerializeField]
-    private Transform[] hardpoint;
+    private Transform[] hardpoints;
     [SerializeField]
     private LayerMask shootableMask;
     [SerializeField]
@@ -52,7 +52,7 @@ public class SpaceshipShooting : MonoBehaviour
     {
         if (firing && !overHeated)
         {
-            fireLaser();
+            FireLaser();
         }
         else
         {
@@ -65,7 +65,7 @@ public class SpaceshipShooting : MonoBehaviour
         }
     }
 
-    void fireLaser()
+    void FireLaser()
     {
         RaycastHit HitInfo;
         if (targetInfo.isTargetInRange(cam.transform.position, cam.transform.forward, out HitInfo, hardpointrange, shootableMask))
