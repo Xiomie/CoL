@@ -11,10 +11,18 @@ public class Crosshair : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    Vector3 pos;
+    public float offset = 3f;
+    public Transform camTarget;
+    public float plerp = .02f;
+    public float rlerp = .01f;
+
     void Update()
     {
-        Vector2 mouseCursorpos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = mouseCursorpos;
+        pos = Input.mousePosition;
+        pos.z = offset;
+        transform.position = Camera.main.ScreenToWorldPoint(pos);
+        transform.position = Vector3.Lerp(transform.position, camTarget.position, plerp);
+        transform.rotation = Quaternion.Lerp(transform.rotation, camTarget.rotation, rlerp);
     }
 }

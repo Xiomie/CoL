@@ -51,4 +51,5 @@ public class PlayerMovement : MonoBehaviour
         transform.position += (transform.right * activeStrafeSpeed * Time.deltaTime)+ (transform.up * activeHoverSpeed * Time.deltaTime);
       }
 
+
 }
