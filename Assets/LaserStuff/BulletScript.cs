@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    public float speed = 1f;
+    public float speed = 10f;
     public Transform collisionParticle;
 
     public float lifetime = 2f;

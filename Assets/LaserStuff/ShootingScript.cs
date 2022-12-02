@@ -11,6 +11,8 @@ public class ShootingScript : MonoBehaviour
     public GameObject muzzlePosition;
 
     float cooldown = 0;
+
+    
     void Update()
     {
         if (Input.GetButton("Fire1") && cooldown >= fireRate)
