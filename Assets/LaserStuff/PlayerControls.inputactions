@@ -2,13 +2,13 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Ship",
-            "id": "1f56dcaa-1791-4c7b-abb6-ae858ece957f",
+            "name": "Ship Controls",
+            "id": "ff08c245-8d9f-4209-b000-8293531fba75",
             "actions": [
                 {
                     "name": "Fire",
                     "type": "PassThrough",
-                    "id": "58ed0588-a966-4845-8cda-e52f84fd9ec5",
+                    "id": "b1c5b192-c814-4459-98ec-8fed0bb60ca4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "Press",
@@ -18,19 +18,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "de3c6564-05fd-4d82-bff3-70a6d83b989a",
+                    "id": "9c62db65-1c41-4122-aa04-8a018a730d86",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "40df1494-63ba-4398-aa18-664d785e2d08",
-                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -29,10 +29,10 @@ public class BulletScript : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
 
-        //if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponet))
+        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponet))
         {
-        //    enemyComponet.takeDamage(1);
+           enemyComponet.takeDamage(1);
         }
-       // Destroy(gameObject);
+        Destroy(gameObject);
     }
 }

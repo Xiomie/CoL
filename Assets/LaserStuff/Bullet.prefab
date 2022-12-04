@@ -92,7 +92,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8983598118907552102}
-  - component: {fileID: 8983598118907552103}
+  - component: {fileID: -413052447030563268}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -116,7 +116,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!114 &8983598118907552103
+--- !u!114 &-413052447030563268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -128,6 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b858415bd366a4341b8d122b975aed85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 100
   collisionParticle: {fileID: 0}
-  lifetime: 10
+  lifetime: 2

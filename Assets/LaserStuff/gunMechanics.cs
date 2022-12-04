@@ -22,11 +22,11 @@ public class gunMechanics : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            Target target = hit.transform.GetComponent<Target>();
+            //Target target = hit.transform.GetComponent<Target>();
 
-            if(target != null)
+            //if(target != null)
             {
-                target.takeDamage(damage);
+            //   target.takeDamage(damage);
             }
         }
     }
