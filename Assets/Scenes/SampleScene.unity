@@ -18902,8 +18902,9 @@ GameObject:
   - component: {fileID: 4269840657543987842}
   - component: {fileID: 6898642101868232280}
   - component: {fileID: 1639467412576975196}
+  - component: {fileID: 6898642101868232281}
   m_Layer: 0
-  m_Name: rockLP001
+  m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20520,6 +20521,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3956071098623287302}
   m_Mesh: {fileID: 7364891284174298802, guid: e09e7be409015364eb290b6f409f5155, type: 3}
+--- !u!114 &6898642101868232281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3956071098623287302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ee9d9659459e24f8225e4ca3bed0d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
+  maxHealth: 3
 --- !u!33 &6898642102132688473
 MeshFilter:
   m_ObjectHideFlags: 0
