@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class BulletScript : MonoBehaviour
@@ -24,5 +25,14 @@ public class BulletScript : MonoBehaviour
             lifetimePassed += Time.deltaTime;
         }
 
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if(collision.gameObject.TryGetComponent<Enemy>(out Enemy enemyComponet))
+        {
+            enemyComponet.takeDamage(1);
+        }
+        Destroy(gameObject);
     }
 }
