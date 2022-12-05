@@ -26,7 +26,10 @@ public class SpaceshipShooting : MonoBehaviour
     [SerializeField]
     private ParticleSystem laserHitParticles;
     [SerializeField]
-    private float Damage = 1f;
+    private float laserDamage = 1f;
+    [SerializeField]
+    private float timeBetweenDamageApplication = 0.25f;
+    private float currentTimeBetweenDamageApplication;
     [SerializeField]
     private float laserHeatThreshold = 2f;
     [SerializeField]
@@ -75,7 +78,20 @@ public class SpaceshipShooting : MonoBehaviour
 
             CoolLaser();
         }
-        Debug.Log(currentLaserHeat + " / " + laserHeatThreshold);
+        
+    }
+
+    void ApplyDamage(HealthComponent healthComponent)
+    {
+
+        currentTimeBetweenDamageApplication += Time.deltaTime;
+        if (currentTimeBetweenDamageApplication > timeBetweenDamageApplication)
+        {
+            currentTimeBetweenDamageApplication = 0f;
+            Debug.Log("Applying Damage To: " + healthComponent.gameObject.name);
+            healthComponent.TakeDamage(laserDamage);
+        }
+        
     }
 
     void FireLaser()
@@ -83,6 +99,8 @@ public class SpaceshipShooting : MonoBehaviour
         RaycastHit hitInfo;
         if (targetInfo.isTargetInRange(HardpointMiddle.transform.position, HardpointMiddle.transform.forward, out hitInfo, hardpointRange, shootableMask))
         {
+            if (hitInfo.collider.GetComponent<HealthComponent>())
+                ApplyDamage(hitInfo.collider.GetComponent<HealthComponent>());
             // Make hit particles here.
             foreach (var laser in lasers)
             {
