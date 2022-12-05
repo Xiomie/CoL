@@ -17,7 +17,7 @@ public class SpaceshipShooting : MonoBehaviour
     [SerializeField]
     private LayerMask shootableMask;
     [SerializeField]
-    private float hardpointRange = 100f;
+    private float hardpointRange = 250f;
     private bool targetInRange = false;
 
     [Header("=== Laser Settings ===")]
