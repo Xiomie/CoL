@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 6031840331427749365}
   - component: {fileID: -5671192848639103202}
   - component: {fileID: -440596118038864377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -78,8 +78,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 6.800228, y: 5.096699, z: 5.453453}
+  m_Center: {x: 0.30978584, y: -0.16708398, z: -0.024715424}
 --- !u!1 &6031840330270419254
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 6031840330270419249}
   - component: {fileID: 6031840330270419248}
   - component: {fileID: 6031840330270419255}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 6031840330674884495}
   - component: {fileID: 6031840330674884494}
   - component: {fileID: 6031840330674884493}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Center Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -288,7 +288,7 @@ GameObject:
   - component: {fileID: 6031840331061333953}
   - component: {fileID: 6031840331061333952}
   - component: {fileID: 6031840331061333959}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 6031840331258515176}
   - component: {fileID: 6031840331258515183}
   - component: {fileID: 6031840331258515182}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Barrel 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   - component: {fileID: 6031840331672661723}
   - component: {fileID: 6031840331672661722}
   - component: {fileID: 6031840331672661721}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Wing2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
