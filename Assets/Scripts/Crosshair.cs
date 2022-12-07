@@ -5,6 +5,12 @@ using UnityEngine;
 public class Crosshair : MonoBehaviour
 {
     // Start is called before the first frame update
+
+    private AudioSource audioLaser;
+    private void Start()
+    {
+        audioLaser = GetComponent<AudioSource>();
+    }
     void Awake()
     {
 
@@ -18,6 +24,11 @@ public class Crosshair : MonoBehaviour
 
     void Update()
     {
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            audioLaser.Play();
+        }
         pos = Input.mousePosition;
         pos.z = offset;
         transform.position = Camera.main.ScreenToWorldPoint(pos);
