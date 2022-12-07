@@ -18,6 +18,7 @@ public class Astroid : MonoBehaviour
 
         if (collision.gameObject.tag == "Projectile")
         {
+            SceneManager.LoadScene("GameOverMenu");
             gameObject.SetActive(false);
         }
 

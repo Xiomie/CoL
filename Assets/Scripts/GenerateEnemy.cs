@@ -22,17 +22,9 @@ public class GenerateEnemy : MonoBehaviour
                 zPos = Random.Range(0, -250);
                 yPos = Random.Range(1, 50);
                 Instantiate(theEnemy, new Vector3(xPos, yPos, zPos), Quaternion.identity);
-                yield return new WaitForSeconds(1f);
                 enemyCount += 1;
+             yield return new WaitForSeconds(0.1f);
             }
-            if(enemyCount == 0)
-        {
-            EnemyDrop();
-
-        }
-
-
-
         }
 
    
