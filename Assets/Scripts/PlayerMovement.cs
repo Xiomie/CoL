@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 
 {
@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     private float rollInput;
     public float rollSpeed = 90f, rollAcceleration = 3.5f;
 
+    [SerializeField] private AudioSource AccelerateEffect;
+    [SerializeField] private AudioSource LaserEffect;
 
 
     // Start is called before the first frame update
@@ -51,5 +53,23 @@ public class PlayerMovement : MonoBehaviour
         transform.position += (transform.right * activeStrafeSpeed * Time.deltaTime)+ (transform.up * activeHoverSpeed * Time.deltaTime);
       }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.CompareTag("Enemy"))
+            {
+            SceneManager.LoadScene("GameOverMenu");
+
+
+        }
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            SceneManager.LoadScene("GameOverMenu");
+
+        }
+
+    }
 
 }
