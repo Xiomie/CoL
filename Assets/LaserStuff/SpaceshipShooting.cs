@@ -61,7 +61,10 @@ public class SpaceshipShooting : MonoBehaviour
 
     private void Update()
     {
-        HandleLaserFiring();
+        if (!PauseMenu.isPaused) { 
+            HandleLaserFiring(); 
+        }
+        
     }
     private void HandleLaserFiring()
     {
